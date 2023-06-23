@@ -1,0 +1,27 @@
+/* signup.css */
+
+.form-container {
+    max-width: 500px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    padding-top: 10px;
+    width: 140px;
+    height: 100px;
+    margin-right: 10px;
+    box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, 0.2);
+  }
+  
+  .form-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  spam {
+    margin: 10px 16px;
+    /* text-align: justify; */
+  }
+  

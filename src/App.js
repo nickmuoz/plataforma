@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ReverseCounter from "./pages/ReverseCounter";
+import Signup from "./pages/Signup";
 
-function App() {
+const App = () => {
+  const targetDate = new Date("2023-06-30T08:00:00");
+  const [showModal, setShowModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          element={
+            <ReverseCounter
+              targetDate={targetDate}
+              handleShowModal={handleShowModal}
+            />
+          }
+          path="/"
+          exact
+        />
+        <Route
+          element={
+            <Signup
+              showModal={showModal}
+              handleShowModal={handleShowModal}
+              handleCloseModal={handleCloseModal}
+            />
+          }
+          path="/inscribete"
+          exact
+        />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

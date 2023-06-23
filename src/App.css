@@ -1,38 +1,242 @@
-.App {
+/* styles.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.row {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* styles.css */
+
+.col {
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* p {
+  
+  color: transparent;
+  moz-text-stroke-width: 2px;
+  webkit-text-stroke-width: 2px;
+  moz-text-stroke-color: #000000;
+  webkit-text-stroke-color: #ffffff;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+} */
+
+#mainContainer {
+  background-image: url("./sources/img/Logo1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.title2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  text-align: center;
+}
+
+.counter {
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.signup-button {
+  background-color: transparent;
+  border: 2px solid gray;
+  color: black;
+  font-size: 16px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.signup-button {
+  border-color: darkgray;
+  color: darkgray;
+}
+/* p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+} */
+
+/* TEXT EFECTS */
+
+.animated-shadow2 {
+  color: #ffffff;
+  font: normal 15px Monserrat Round, sans-serif;
+  height: 140px;
+  left: 0;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  animation: move linear 2000ms infinite;
+  z-index: 2
+}
+/*Animación para rotar las sombras*/
+@keyframes move {
+  0% {
+    text-shadow:
+      4px -4px 0 #F7C331,
+      3px -3px 0 #F7C331,
+      2px -2px 0 #F7C331,
+      1px -1px 0 #F7C331,
+      -4px 4px 0 #13f1fc,
+      -3px 3px 0 #13f1fc,
+      -2px 2px 0 #13f1fc,
+      -1px 1px 0 #13f1fc
+    ;
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    text-shadow:
+      -4px -4px 0 #13f1fc,
+      -3px -3px 0 #13f1fc,
+      -2px -2px 0 #13f1fc,
+      -1px -1px 0 #13f1fc,
+      4px 4px 0 #F7C331,
+      3px 3px 0 #F7C331,
+      2px 2px 0 #F7C331,
+      1px 1px 0 #F7C331
+    ;
+  }
+  50% {
+    text-shadow:
+      -4px 4px 0 #F7C331,
+      -3px 3px 0 #F7C331,
+      -2px 2px 0 #F7C331,
+      -1px 1px 0 #F7C331,
+      4px -4px 0 #13f1fc,
+      3px -3px 0 #13f1fc,
+      2px -2px 0 #13f1fc,
+      1px -1px 0 #13f1fc
+    ;
+  }
+  75% {
+    text-shadow:
+      4px 4px 0 #13f1fc,
+      3px 3px 0 #13f1fc,
+      2px 2px 0 #13f1fc,
+      1px 1px 0 #13f1fc,
+      -4px -4px 0 #F7C331,
+      -3px -3px 0 #F7C331,
+      -2px -2px 0 #F7C331,
+      -1px -1px 0 #F7C331
+    ;
+  }
+  100% {
+    text-shadow:
+      4px -4px 0 #F7C331,
+      3px -3px 0 #F7C331,
+      2px -2px 0 #F7C331,
+      1px -1px 0 #F7C331,
+      -4px 4px 0 #13f1fc,
+      -3px 3px 0 #13f1fc,
+      -2px 2px 0 #13f1fc,
+      -1px 1px 0 #13f1fc
+    ;
+  }
+}
+
+.animated-shadow {
+  color: #ffffff;
+  font: normal 60px Monserrat Round, sans-serif;
+  height: 140px;
+  left: 0;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  animation: move linear 2000ms infinite;
+  z-index: 2
+}
+/*Animación para rotar las sombras*/
+@keyframes move {
+  0% {
+    text-shadow:
+      4px -4px 0 #F7C331,
+      3px -3px 0 #F7C331,
+      2px -2px 0 #F7C331,
+      1px -1px 0 #F7C331,
+      -4px 4px 0 #13f1fc,
+      -3px 3px 0 #13f1fc,
+      -2px 2px 0 #13f1fc,
+      -1px 1px 0 #13f1fc
+    ;
+  }
+  25% {
+    text-shadow:
+      -4px -4px 0 #13f1fc,
+      -3px -3px 0 #13f1fc,
+      -2px -2px 0 #13f1fc,
+      -1px -1px 0 #13f1fc,
+      4px 4px 0 #F7C331,
+      3px 3px 0 #F7C331,
+      2px 2px 0 #F7C331,
+      1px 1px 0 #F7C331
+    ;
+  }
+  50% {
+    text-shadow:
+      -4px 4px 0 #F7C331,
+      -3px 3px 0 #F7C331,
+      -2px 2px 0 #F7C331,
+      -1px 1px 0 #F7C331,
+      4px -4px 0 #13f1fc,
+      3px -3px 0 #13f1fc,
+      2px -2px 0 #13f1fc,
+      1px -1px 0 #13f1fc
+    ;
+  }
+  75% {
+    text-shadow:
+      4px 4px 0 #13f1fc,
+      3px 3px 0 #13f1fc,
+      2px 2px 0 #13f1fc,
+      1px 1px 0 #13f1fc,
+      -4px -4px 0 #F7C331,
+      -3px -3px 0 #F7C331,
+      -2px -2px 0 #F7C331,
+      -1px -1px 0 #F7C331
+    ;
+  }
+  100% {
+    text-shadow:
+      4px -4px 0 #F7C331,
+      3px -3px 0 #F7C331,
+      2px -2px 0 #F7C331,
+      1px -1px 0 #F7C331,
+      -4px 4px 0 #13f1fc,
+      -3px 3px 0 #13f1fc,
+      -2px 2px 0 #13f1fc,
+      -1px 1px 0 #13f1fc
+    ;
   }
 }
