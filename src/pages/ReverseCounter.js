@@ -9,7 +9,7 @@ const ReverseCounter = ({ targetDate, handleShowModal }) => {
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   });
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const ReverseCounter = ({ targetDate, handleShowModal }) => {
           days: 0,
           hours: 0,
           minutes: 0,
-          seconds: 0
+          seconds: 0,
         });
       } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -49,25 +49,24 @@ const ReverseCounter = ({ targetDate, handleShowModal }) => {
       className="d-flex flex-column justify-content-center align-items-center vh-100 background-image"
       style={{ backgroundImage: `url(${backgroundimage})` }}
     >
-      {/* <h1 className="title">
-        <b>Hay otra alternativa</b>
-      </h1> */}
-      <p className="animated-shadow">Descúbrelo en:</p>
-      <div className="counter">
-        <Row>
-          <Col>
-            <p className="animated-shadow2">Días: {counter.days}</p>
-          </Col>
-          <Col>
-            <p className="animated-shadow2">Horas: {remainingHours}</p>
-          </Col>
-          <Col>
-            <p className="animated-shadow2">Minutos: {remainingMinutes}</p>
-          </Col>
-          <Col>
-            <p className="animated-shadow2">Segundos: {counter.seconds}</p>
-          </Col>
-        </Row>
+      <div id="counterContainer">
+        <p className="animated-shadow">Descúbrelo en:</p>
+        <div className="counter">
+          <Row>
+            <Col>
+              <p className="animated-shadow2">Días: {counter.days}</p>
+            </Col>
+            <Col>
+              <p className="animated-shadow2">Horas: {remainingHours}</p>
+            </Col>
+            <Col>
+              <p className="animated-shadow2">Minutos: {remainingMinutes}</p>
+            </Col>
+            <Col>
+              <p className="animated-shadow2">Segundos: {counter.seconds}</p>
+            </Col>
+          </Row>
+        </div>
       </div>
       <Button
         onClick={handleShowModal}
